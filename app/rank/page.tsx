@@ -116,7 +116,8 @@ export default function RankPage() {
         .order("likes", { ascending: false })
 
       if (error) {
-        console.error("Error al obtener los posts:", error);
+        //console.error("Error al obtener los posts:", error);
+        console.error("Error completo:", JSON.stringify(error, null, 2));
       } else {
         console.log("Posts obtenidos:", data);
         setPosts(data);
